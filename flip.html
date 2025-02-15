@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Modals Example</title>
+  <style>
+    body {
+      font-family: "Open sans", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .space-y-4 > * + * {
+      margin-top: 1rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      background-color: #122832;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-outline-icon {
+      padding: 0.5rem;
+      background: transparent;
+      border: 1px solid #122832;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .btn-close {
+      padding: 0.5rem 1rem;
+      background-color: #d9534f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="p-4 space-y-4">
+    <button id="openFirstModal" class="btn">Open First Modal</button>
+
+    <!-- First Modal -->
+    <div id="firstModal" class="modal">
+      <div class="modal-content">
+        <h2>First Modal</h2>
+        <p>This is the first modal content.</p>
+        <button id="openSecondModal" class="btn-outline-icon">
+          <span class="icon">ℹ️</span>
+        </button>
+        <button id="closeFirstModal" class="btn-close">Close</button>
+      </div>
+    </div>
+
+    <!-- Second Modal -->
+    <div id="secondModal" class="modal">
+      <div class="modal-content">
+        <h2>Second Nested Modal</h2>
+        <p>This is the second modal that opens over the first one.</p>
+        <button id="closeSecondModal" class="btn-close">Close</button>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-8 gap-4">
+    <!-- Example of icons -->
+    <img
+      src="https://explorer-api.walletconnect.com/v3/logo/md/846ae068-c112-412a-c103-7aa414bc9400?projectId=81c3139a420b30a48b2dadaf503b6e56"
+      alt="Icon 1"
+      class="w-20 h-20 cursor-pointer hover:opacity-75 icon"
+    />
+    <img
+      src="https://explorer-api.walletconnect.com/v3/logo/md/846ae068-c112-412a-c103-7aa414bc9400?projectId=81c3139a420b30a48b2dadaf503b6e56"
+      alt="Icon 2"
+      class="w-20 h-20 cursor-pointer hover:opacity-75 icon"
+    />
+    <img
+      src="https://explorer-api.walletconnect.com/v3/logo/md/846ae068-c112-412a-c103-7aa414bc9400?projectId=81c3139a420b30a48b2dadaf503b6e56"
+      alt="Icon 3"
+      class="w-20 h-20 cursor-pointer hover:opacity-75 icon"
+    />
+    <!-- Add as many as you need -->
+  </div>
+  
+  <!-- Modal -->
+  <div
+    id="modal"
+    class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden"
+  >
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+      <img id="modal-image" src="" alt="Modal Image" class="w-32 h-32 mx-auto mb-4" />
+      <div class="text-center space-y-4">
+        <button
+          id="connect-manually"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Connect Manually
+        </button>
+        <button
+          onclick="closeModal()"
+          class="text-gray-600 hover:text-gray-900"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const firstModal = document.getElementById("firstModal");
+      const secondModal = document.getElementById("secondModal");
+      const openFirstModal = document.getElementById("openFirstModal");
+      const closeFirstModal = document.getElementById("closeFirstModal");
+      const openSecondModal = document.getElementById("openSecondModal");
+      const closeSecondModal = document.getElementById("closeSecondModal");
+
+      // Show the first modal
+      openFirstModal.addEventListener("click", () => {
+        firstModal.style.display = "flex";
+      });
+
+      // Close the first modal
+      closeFirstModal.addEventListener("click", () => {
+        firstModal.style.display = "none";
+      });
+
+      // Show the second modal
+      openSecondModal.addEventListener("click", () => {
+        secondModal.style.display = "flex";
+      });
+
+      // Close the second modal
+      closeSecondModal.addEventListener("click", () => {
+        secondModal.style.display = "none";
+      });
+
+      // Close modals on clicking outside of content
+      [firstModal, secondModal].forEach((modal) => {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+    });
+    // Select all icons and modal elements
+const icons = document.querySelectorAll('.icon');
+const modal = document.getElementById('modal');
+const modalImage = document.getElementById('modal-image');
+const connectManuallyButton = document.getElementById('connect-manually');
+
+// Attach a click event listener to all icons
+icons.forEach((icon) => {
+  icon.addEventListener('click', () => {
+    const imageSrc = icon.src; // Get the image source of the clicked icon
+    modalImage.src = imageSrc; // Set it in the modal
+    modal.classList.remove('hidden'); // Show the modal
+  });
+});
+
+// Function to close the modal
+function closeModal() {
+  modal.classList.add('hidden'); // Hide the modal
+}
+
+// Functionality for "Connect Manually" button
+connectManuallyButton.addEventListener('click', () => {
+  alert(`You have manually connected with the image: ${modalImage.src}`);
+});
+
+  </script>
+</body>
+</html>

